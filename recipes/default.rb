@@ -34,7 +34,8 @@ python_virtualenv virtualenv_path do
     action :create
 end
 
-python_packages = ["ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit-learn", "statsmodels", "patsy"]
+python_packages = ["ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit-learn", 
+  "statsmodels", "patsy", "pyzmq", "tornado"]
 python_packages.each do |pkg|
     python_pip pkg do
       virtualenv virtualenv_path
